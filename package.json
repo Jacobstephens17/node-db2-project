@@ -4,10 +4,21 @@
     "description": "Node DB 2 Module Challenge",
     "main": "index.js",
     "scripts": {
-        "server": "nodemon index.js"
+        "server": "nodemon index.js",
+        "migrateUp": " knex migrate:up",
+        "migrateDown": "knex migrate:down",
+        "migrateLatest": "knex migrate:latest",
+        "migrateRollBack": "knex migrate:rollback",
+        "seed": "knex seed:run"
     },
     "author": "Lambda School",
     "devDependencies": {
         "nodemon": "^2.0.2"
+    },
+    "dependencies": {
+        "express": "^4.17.1",
+        "knex": "^0.21.17",
+        "pg": "^8.5.1",
+        "sqlite3": "^5.0.2"
     }
 }
